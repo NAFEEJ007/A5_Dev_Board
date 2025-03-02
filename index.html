@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A5 Dev Board</title>
+    <!-- Font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- daisy Ui cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+        .font-poppins {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+
+</head>
+<!-- bg-[#F4F7FF] -->
+<body id="body-background" class="bg-[#F4F7FF] min-h-screen p-1 m-0">
+
+    <!-- header section -->
+    <section class="">
+        <header>
+            <nav class="bg-[#ffffff]  mt-4 mb-4 ml-15 mr-15 rounded-xl px-4 py-2">
+                <div class="flex justify-between items-center">
+                    <div class="flex">
+                        <img src="assets/logo.png" alt="">
+                        <div class="text-4xl ml-3"><span class="font-light">Dev</span><span
+                                class="font-bold">Board</span></div>
+                    </div>
+
+                    <div class="">
+                        <div class="btn p-5 rounded-4xl "><img src="assets/checkbox.png" alt="">
+                            <p id="completed-increment" class="font-bold text-xl ">23</p>
+                        </div>
+                        <div id="theme-changer" class="btn w-15 h-15  rounded-full ml-5"><img src="assets/theme-btn.png" alt=""></div>
+                    </div>
+
+                </div>
+
+
+            </nav>
+        </header>
+    </section>
+
+    <!-- flex section -->
+    <section class=" mt-4 mb-4 ml-15 mr-15 rounded-xl px-4 py-2 ">
+
+        <div class="flex justify-between gap-6">
+
+
+            <!-- big div -->
+            <div class="bg-[#ffffff] p-6 rounded-xl w-full">
+
+                <!-- 3 rect + 6 boxes div-->
+
+
+                <!-- 3 rect in flex-->
+                <div class="flex gap-4">
+
+                    <!-- First rect -->
+                    <div class="card-xs shadow-sm flex items-center p-4">
+                        <div class="flex gap-4 items-center">
+                            <!-- Image Container -->
+                            <div class="btn w-14 h-14 rounded-full self-center	">
+                                <img src="assets/checkbox.png" alt="">
+                            </div>
+
+                            <!-- Text Container -->
+                            <div class="flex flex-col">
+                                <div class="text-[#00303C] text-base font-semibold self-center	">Task Assigned</div>
+                                <div>
+                                    <p id="assign-decrement" class="font-bold text-xl">06</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- second rect -->
+                    <div id="redirect-blog"
+                        class="card flex-grow card-xs shadow-sm bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] cursor-pointer">
+                        <div class="card-body flex flex-row gap-4 p-4">
+                            <div class="text-[#ffffff]"><img src="assets/board.png" alt=""></div>
+                            <div class="text-[#ffffff] text-2xl">Discover Something <br>New Today!</div>
+                        </div>
+                    </div>
+
+                    <!-- third rect -->
+                    <div class="card-xs shadow-sm flex items-center p-4">
+                        <div class="flex gap-4 items-center justify-center">
+                            <!-- Image Container -->
+                            <div class="btn w-14 h-14 rounded-full self-center	">
+                                <img src="assets/calender.png" alt="">
+                            </div>
+
+                            <!-- Text Container -->
+                            <div class="date_container " id="date-container">
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 6 boxes in grid -->
+                <div class="grid  grid-cols-3 mt-6 gap-6">
+                    <!-- 1st box -->
+                    <div id="box-container" class="card bg-[#F4F7FF] shadow-sm p-4 flex flex-col  ">
+
+                        <p class="text-base bg-[#ffffff] mb-3">ShopEase</p>
+                        <p id="paragraph-one" class="text-2xl mb-5 font-bold">Fix Mobile Button Issue</p>
+                        <p class="bg-[#ffffff] text-base mb-3 p-3">Debug using Chrome DevTools</p>
+
+                        <div class="flex justify-between items-center mt-4 mb-3">
+                            <div class="flex flex-col">
+                                <p class="text-sm">Deadline</p>
+                                <p class="text-xs	 font-bold	">21 March 2025</p>
+                            </div>
+                            <button id="completed-one" class="btn btn-primary bg-[#3752FD] text-base">Completed</button>
+                        </div>
+
+                    </div>
+
+
+                    <!-- 2nd box -->
+                    <div id="box-container-two" class="card bg-[#F4F7FF] shadow-sm p-4 flex flex-col  ">
+
+                        <p class="text-base bg-[#ffffff] mb-3">CloudSync</p>
+                        <p id="paragraph-two" class="text-2xl mb-5 font-bold">Add Dark Mode</p>
+                        <p class="bg-[#ffffff] text-base mb-3 p-3">Debug using Chrome DevTools</p>
+
+                        <div class="flex justify-between items-center mt-4 mb-3">
+                            <div class="flex flex-col">
+                                <p class="text-sm">Deadline</p>
+                                <p class="text-xs	 font-bold	">21 March 2025</p>
+                            </div>
+                            <button id="completed-two" class="btn btn-primary bg-[#3752FD] text-base">Completed</button>
+                        </div>
+
+                    </div>
+
+
+                    <!-- 3rd box -->
+                    <div id="box-container-three" class="card bg-[#F4F7FF] shadow-sm p-4 flex flex-col ">
+
+                        <p class="text-base bg-[#ffffff] mb-3">SwiftPay</p>
+                        <p id="paragraph-three" class="text-2xl mb-5 font-bold">Optimize Home page</p>
+                        <p class="bg-[#ffffff] text-base mb-3 p-3">Debug using Chrome DevTools</p>
+
+                        <div class="flex justify-between items-center mt-4 mb-3">
+                            <div class="flex flex-col">
+                                <p class="text-sm">Deadline</p>
+                                <p class="text-xs	 font-bold	">21 March 2025</p>
+                            </div>
+                            <button id="completed-three"
+                                class="btn btn-primary bg-[#3752FD] text-base">Completed</button>
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- 4th box -->
+                    <div id="box-container-four" class="card bg-[#F4F7FF] shadow-sm p-4 flex flex-col ">
+
+                        <p class="text-base bg-[#ffffff] mb-3">Meta</p>
+                        <p id="paragraph-four" class="text-2xl mb-5 font-bold">Add new emoji 🤲 </p>
+                        <p class="bg-[#ffffff] text-base mb-3 p-3">Debug using Chrome DevTools</p>
+
+                        <div class="flex justify-between items-center mt-4 mb-3">
+                            <div class="flex flex-col">
+                                <p class="text-sm">Deadline</p>
+                                <p class="text-xs	 font-bold	">21 March 2025</p>
+                            </div>
+                            <button id="completed-four"
+                                class="btn btn-primary bg-[#3752FD] text-base">Completed</button>
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- 5th box -->
+                    <div id="box-container-five" class="card bg-[#F4F7FF] shadow-sm p-4 flex flex-col ">
+
+                        <p class="text-base bg-[#ffffff] mb-3">Google LLC</p>
+                        <p id="paragraph-five" class="text-2xl mb-5 font-bold">Integrate OpenAI API </p>
+                        <p class="bg-[#ffffff] text-base mb-3 p-3">Debug using Chrome DevTools</p>
+
+                        <div class="flex justify-between items-center mt-4 mb-3">
+                            <div class="flex flex-col">
+                                <p class="text-sm">Deadline</p>
+                                <p class="text-xs	 font-bold	">21 March 2025</p>
+                            </div>
+                            <button id="completed-five"
+                                class="btn btn-primary bg-[#3752FD] text-base">Completed</button>
+                        </div>
+
+                    </div>
+
+
+                    <!-- 6th box -->
+                    <div id="box-container-six" class="card bg-[#F4F7FF] shadow-sm p-4 flex flex-col ">
+
+                        <p class="text-base bg-[#ffffff] mb-3">Glassdoar</p>
+                        <p id="paragraph-six" class="text-2xl mb-5 font-bold">Improve Job searching</p>
+                        <p class="bg-[#ffffff] text-base mb-3 p-3">Debug using Chrome DevTools</p>
+
+                        <div class="flex justify-between items-center mt-4 mb-3">
+                            <div class="flex flex-col">
+                                <p class="text-sm">Deadline</p>
+                                <p class="text-xs	 font-bold	">21 March 2025</p>
+                            </div>
+                            <button id="completed-six" class="btn btn-primary bg-[#3752FD] text-base">Completed</button>
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+
+
+
+                </div>
+
+
+
+
+
+            </div>
+
+
+            <!-- column div -->
+            <div class="bg-[#ffffff] rounded-xl">
+
+                <div class="flex flex-col justify-center items-center gap-4 p-5">
+                    <div>
+                        <div class="flex flex-row gap-3">
+                            <div><img src="assets/activity.png" alt=""></div>
+                            <p class="text-xl	font-semibold	">Activity Log</p>
+                        </div>
+
+                    </div>
+
+                    <div><button id="clear-history" class="btn btn-active btn-primary">Clear History</button></div>
+                </div>
+
+
+                <div id="history-container" class="p-5 m-5">
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+    </section>
+
+    <!-- Scripts -->
+
+    <script src="./js/redirect.js"></script>
+    <script src="./js/completed.js"></script>
+    <script src="./js/date-time.js"></script>
+    <script src="./js/change-theme.js"></script>
+
+</body>
+
+</html>
